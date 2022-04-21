@@ -19,7 +19,7 @@ contents_text=[]
 result={}
 
 #엑셀로 저장하기 위한 변수
-RESULT_PATH ='C:/vscode/'  #결과 저장할 경로
+RESULT_PATH =''  #결과 저장할 경로
 now = datetime.now() #파일이름 현 시간으로 저장하기
 
 #내용 정제화 함수
@@ -73,7 +73,7 @@ def crawler(maxpage,query,sort):
 
     # 새로 만들 파일이름 지정
     outputFileName = '%s-%s-%s  %s시 %s분 %s초 merging.xlsx' % (now.year, now.month, now.day, now.hour, now.minute, now.second)
-    df.to_excel(RESULT_PATH+outputFileName,sheet_name='sheet1')
+    df.to_excel(outputFileName,sheet_name='sheet1')
 
 #메인함수
 def main():
